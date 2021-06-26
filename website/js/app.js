@@ -42,10 +42,6 @@ const postData = async ( url = '', data = {})=>{
     }
 }
 
-
-
-
-
 /**
  * Begin Helper Functions
 */
@@ -55,7 +51,6 @@ function date(){
     var dd = String(today.getDate()).padStart(2, '0');
     var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
     var yyyy = today.getFullYear();
-
     today = mm + '/' + dd + '/' + yyyy;
     return today;
 }
@@ -76,7 +71,6 @@ function generate(evt){
     getTemperature(baseURL_1,baseURL_2,zipCode,apiKey,baseURL_3)
 
     .then(function(data){
-        console.log(data);
             // Chained Promise that makes a POST request to add the API data and the user data to the API.
             postData('/addData', {
                 temp: data,

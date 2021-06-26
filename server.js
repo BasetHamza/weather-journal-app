@@ -1,5 +1,5 @@
 /* Empty JS object to act as endpoint for all routes */
-projectData = {};
+projectData = [];
 
 // TODO-Express to run server and routes
 const express = require('express');
@@ -21,13 +21,12 @@ app.use(cors());
 
 /* Initializing the main project folder */
 // Allows us to write server-side code that can then connect to client-side code which would be in a folder called website.
-app.use(express.static('website/js'));
-
+app.use(express.static('website'));
 
 
 /*Creating a local server*/
 
-const port = 5500;
+const port = 8000;
 
 const server = app.listen(port, listening);
 
@@ -35,7 +34,6 @@ function listening(){
     console.log("server running");
     console.log(`running on localhost: ${port}`);
 }
-
 
 /* GET route that returns the projectData object */
 app.get('/',function(req,res){
@@ -52,18 +50,14 @@ app.get('/',function(req,res){
 app.post('/addData', addWeatherData);
 
 function addWeatherData (req, res){
-
-    console.log(req.body);
-
-    projectData.push(req.body);
-    console.log(projectData);
-
-    // let newData = req.body;
-    // let newEntry = {
-    //     temp: newData.temp,
-    //     date: newData.date,
-    //     response: newData.response
-    // }
+    let newData = req.body;
+    let newEntry = {
+        temp: newData.temp,
+        date: newData.date,
+        response: newData.response
+    }
     
-    // projectData.push(newEntry);
+    projectData.push(newEntry);
+
+    console.log(projectData);
 }
