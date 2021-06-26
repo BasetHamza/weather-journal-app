@@ -104,6 +104,17 @@ const updateUI = async () =>{
             document.getElementById('response').innerHTML = `Feeling: NA`;
         }
         
+        // Set the background of the feeling box based on the temperature
+        if (allData[allData.length - 1].temp < 55)
+        {
+            document.getElementById('entryHolder').style.background = `url("../images/winter.jpg") center/cover fixed no-repeat`;
+            document.getElementById('entryHolder').style.color = "blue";
+        } else {
+            document.getElementById('entryHolder').style.background = `url("../images/summer.jpg") center/cover fixed no-repeat`;
+            document.getElementById('entryHolder').style.color = "red";
+
+        }
+
     } catch(error){
         console.log("error",error);
     }
