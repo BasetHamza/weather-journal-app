@@ -77,12 +77,37 @@ function generate(evt){
                 date: date(),
                 response: document.getElementById('feeling').value
             });
-        }
+
+            // update the UI
+            updateUI();
+    }
     )
-    
 }
 
 
+
+// A function to update the UI.
+const updateUI = async () =>{
+
+    const request = await fetch('/all');
+
+    try{
+
+        const allData = await request.json();
+
+        // Accessing the last element which represents the most recent entry.
+        document.getElementById('date').innerHTML = `Date: ${allData[allData.length - 1].date}`;
+        document.getElementById('temp').innerHTML = `Temperature: ${allData[allData.length - 1].temp}`;
+        if (allData[allData.length - 1].response !== ""){ // A condition to print NA if a feeling was not entered.
+            document.getElementById('response').innerHTML = `Feeling: ${allData[allData.length - 1].response}`;
+        } else {
+            document.getElementById('response').innerHTML = `Feeling: NA`;
+        }
+        
+    } catch(error){
+        console.log("error",error);
+    }
+}
 
 /**
  * Begin Events

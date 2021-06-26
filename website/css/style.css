@@ -25,7 +25,7 @@ h1 {
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 1.5em;
-  font-size: 1.5em;
+  font-size: 3em;
   font-weight: bolder;
 }
 
@@ -96,7 +96,12 @@ input:focus {
   margin-top: 2em;
   color: gold;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.2em;
   text-decoration: underline;
+  text-decoration-color: #56ccf2;
+  text-decoration-thickness: 3px;
+  font-style: italic;
+  font-weight: bold;
 }
 
 #entryHolder {

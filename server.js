@@ -36,7 +36,7 @@ function listening(){
 }
 
 /* GET route that returns the projectData object */
-app.get('/',function(req,res){
+app.get('/all',function(req,res){
     res.send(projectData);
 });
 
@@ -59,5 +59,5 @@ function addWeatherData (req, res){
     
     projectData.push(newEntry);
 
-    console.log(projectData);
+    // console.log(projectData);
 }
