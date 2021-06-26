@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background */
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url("/website/images/background.jpg") center/cover fixed no-repeat;
+  height: 100vh;
+  position: relative;
+}
+
+main {
+  width: 50%;
+  position: absolute;
+  right: 25%;
+  left: 25%;
+}
+
+h1 {
+  color: bisque;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 1.5em;
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+form {
+  text-align: center;
+  color: aliceblue;
+}
+
+#generate {
+  width: 25%;
+  text-emphasis: bold;
+  font-size: 1.1rem;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#generate:hover {
+  background-color: #45a049;
+}
+
+.myInput {
+  width: 50%;
+  height: 80px;
+  margin: 8px 0;
+  padding: 12px 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+  text-align: center;
+}
+
+.myInput:focus {
+  background-color: lightblue;
+}
+
+label {
+  display: block;
+  margin: 1em;
+  font-weight: bold;
+}
+
+input {
+  text-align: center;
+}
+
+input:focus {
+  background-color: lightblue;
+}
+
+.entry {
+  color: aliceblue;
+  font-size: 1.1em;
+}
+
+.title {
+  margin-left: 5em;
+  margin-top: 2em;
+  color: gold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-decoration: underline;
+}
+
+#entryHolder {
+  width: 75%;
+  height: 120px;
+  right: 12.5%;
+  left: 12.5%;
+  background: rgba(59, 74, 107, 0.4);
+  position: absolute;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+}
