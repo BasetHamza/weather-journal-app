@@ -21,13 +21,13 @@ app.use(cors());
 
 /* Initializing the main project folder */
 // Allows us to write server-side code that can then connect to client-side code which would be in a folder called website.
-app.use(express.static('website'));
+app.use(express.static('website/js'));
 
 
 
 /*Creating a local server*/
 
-const port = 8000;
+const port = 5500;
 
 const server = app.listen(port, listening);
 
@@ -52,13 +52,16 @@ app.get('/',function(req,res){
 app.post('/addData', addWeatherData);
 
 function addWeatherData (req, res){
+
+    console.log(req.body);
+
     projectData.push(req.body);
     console.log(projectData);
 
     // let newData = req.body;
     // let newEntry = {
     //     temp: newData.temp,
-    //     data: newData.date,
+    //     date: newData.date,
     //     response: newData.response
     // }
     
