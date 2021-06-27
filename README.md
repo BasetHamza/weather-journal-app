@@ -16,6 +16,12 @@ You will need to have the following installed softwares and firmwares:
 - cors
 - A web browser of your choice
 
+## Project Structure
+
+The following is the project structure and list of files.
+
+![project structure](./documentation/tree.PNG)
+
 ## Instructions
 
 ### Setting up the environment
