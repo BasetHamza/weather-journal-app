@@ -6,7 +6,7 @@
 // baseURL: api.openweathermap.org/data/2.5/weather?zip={zip code},{country code}&appid={API key}
 let baseURL_1 = 'http://api.openweathermap.org/data/2.5/weather?zip=';
 let baseURL_2 = '&appid=';
-let apiKey = '00beb9ba70f8e6c6228a7557f6dab996';
+const apiKey = '00beb9ba70f8e6c6228a7557f6dab996';
 let baseURL_3 = '&units=imperial'; // To get the temperature in Fahrenheit since the standard is in Kelvin.
 
 let tempData;
